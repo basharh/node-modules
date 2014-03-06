@@ -1,0 +1,5 @@
+{
+  "name": "v8parser",
+  "description": "A parser for v8 debugger output",
+  "main": "./lib/v8parser"
+}
