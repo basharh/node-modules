@@ -38,9 +38,7 @@ function process( node ){
     }
 }
 
-/*  st: syntax tree
- *  process: function to read the node
- */
+// st: syntax tree
 function walkTree( node ){
     var children = [],
         prop;
