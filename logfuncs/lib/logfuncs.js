@@ -43,23 +43,27 @@ function process( node ){
  */
 function walkTree( node ){
     var children = [],
-        body = node.body,
         prop;
 
-    // add body nodes
-    if(Array.isArray( body )){
-        children = children.concat( body );
-    }
-    else if ( body && body.type ) {
-        children.push( body );
-    }
-
-    // add any property of the node that are nodes themselves
+    /* Check if any of the node's properties are nodes, or if they're
+     * arrays, check to see if those arrays hold nodes and add them.
+     * Nodes can have array properties in the case of 'body' or
+     * arguments. */
     for ( var key in node ){
         if ( node.hasOwnProperty(key) ){
             prop = node[key];
-            if ( prop && prop['type'] )
+
+            if ( prop && prop['type'] ){
                 children.push( prop );
+                continue;
+            }
+
+            if ( prop && Array.isArray(prop)){
+                prop.forEach( function( el ){
+                    if ( el.type )
+                        children.push( el );
+                });
+            }
         }
     }
 
