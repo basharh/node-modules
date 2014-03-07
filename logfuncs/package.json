@@ -1,0 +1,13 @@
+{
+    "name": "logfuncs",
+    "description": "Function call logger",
+    "main": "./lib/logfuncs",
+    "dependencies": {
+        "colors": "*",
+        "esprima": "^1.0.4",
+        "escodegen": "^1.2.0"
+    },
+    "bin": {
+        "npm": "./cli.js"
+    }
+}
