@@ -1,0 +1,9 @@
+{
+  "name": "s3util",
+  "description": "S3 Wrapper Module",
+  "main": "./s3util",
+  "version": "0.1.1",
+  "author": {
+    "name": "Bashar Harfoush"
+  },
+}

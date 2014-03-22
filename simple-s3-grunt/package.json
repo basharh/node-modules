@@ -1,0 +1,9 @@
+{
+  "name": "simple-s3-grunt",
+  "description": "Grunt task that syncs a local folder with an S3 bucket",
+  "main": "tasks/s3",
+  "version": "0.1.1",
+  "author": {
+    "name": "Bashar Harfoush"
+  }
+}
